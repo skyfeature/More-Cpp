@@ -19,9 +19,13 @@ void mightGoWrong() {
 
 }
 
+void usesMightGoWrong(){
+	mightGoWrong();
+}
+
 int main() {
 	try {
-		mightGoWrong();
+		usesMightGoWrong();
 	}
 	catch(int e) {
 		cout << "Error code: " << e << "\n";
@@ -33,5 +37,6 @@ int main() {
 		cout << "Error message: " << e << "\n";
 	}
 
-	cout << "Still running"
+	cout << "Still running\n";
+	return 0;
 }
